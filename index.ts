@@ -39,7 +39,7 @@ if(randomNumberPrint >= 1 && randomNumberPrint <= 6){
 }
 
 // Task 3
-const agePrint = Number(prompt("Введіть свій вік:"))
+const agePrint = Number(prompt("3) Введіть свій вік:"))
 if(agePrint <= 6 || agePrint >= 65){
     console.log("Безкоштовно")
 }else if(agePrint >= 7 && agePrint <= 12){
@@ -53,11 +53,31 @@ if(agePrint <= 6 || agePrint >= 65){
 }
 
 // Task 4
-const a:number = Number(prompt("Сторона a:"))
+const a:number = Number(prompt("4) Сторона a:"))
 const b:number = Number(prompt("Сторона b:"))
 const c:number = Number(prompt("Сторона c:"))
 if(a === b && b === c && c === a){
     console.log("Рівносторонній")
-}else if(a === b || b === c || c === a){
+}else if(a === b || b === c){
     console.log("Рівбедрений")
+}else if (a + b < c || a + c < b || b + c < a){
+    console.log("Не трикутник")
+}else{
+    console.log("Різносторонній")
+}
+
+// Taks 5
+const angle:number = Number(prompt("5) Кут (Від 1 до 180):"))
+if(angle <= 0 || angle > 180){
+    console.error("Помилка! Не вірно вказані дані!")
+}else{
+    if (angle < 90) {
+        console.log("Гострий");
+    } else if (angle === 90) {
+        console.log("Прямий");
+    } else if (angle < 180) {
+        console.log("Тупий");
+    } else if (angle === 180) {
+        console.log("Розгорнутий");
+    }
 }
